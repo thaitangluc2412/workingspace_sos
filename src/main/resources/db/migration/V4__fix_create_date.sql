@@ -1,0 +1,1 @@
+ALTER TABLE property CHANGE createDate create_date datetime;

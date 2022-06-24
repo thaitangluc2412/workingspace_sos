@@ -1,0 +1,36 @@
+### get all review
+GET {{local}}/api/reviews
+Accept: application/json
+
+### get review by id
+GET {{local}}/api/reviews/1
+Accept: application/json
+
+### get review by propertyId
+GET {{local}}/api/properties/2/reviews
+Accept: application/json
+
+### post review
+POST {{local}}/api/reviews
+Content-Type: application/json
+
+{
+  "customerId": 7,
+  "propertyId": 2,
+  "rating": "2.0",
+  "content": "testtttt",
+  "createDate": "2022-05-29T00:00:00"
+}
+
+### put review
+PUT {{local}}/api/reviews/1
+Content-Type: application/json
+
+{
+    "reviewId": 1,
+    "customerId": 7,
+    "propertyId": 2,
+    "rating": "5.0",
+    "content": "testtt",
+    "createDate": "2022-05-29T00:00:00"
+  }

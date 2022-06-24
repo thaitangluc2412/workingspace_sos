@@ -1,0 +1,94 @@
+### Get all rooms
+GET {{local}}/api/rooms
+Accept: application/json
+
+### Get room by id
+GET {{local}}/api/rooms/1
+Accept: application/json
+
+### Get room with Price
+GET {{local}}/api/rooms/priceMonth/1
+Accept: application/json
+
+### Post room
+POST {{local}}/api/rooms
+Content-Type: application/json
+
+{
+  "propertyId": 1,
+  "price": {
+    "hourPrice": 1,
+    "dayPrice": 2,
+    "weekPrice": 3,
+    "monthPrice": 4
+  },
+  "roomStatusId": 2,
+  "roomName": "test",
+  "size": "15",
+  "capacity": "6",
+  "description": "test",
+  "bedrooms": 1,
+  "images": [],
+  "services": [
+    {
+      "serviceId": 1,
+      "serviceName": "Free Wifi",
+      "icon": "faWifi"
+    },
+    {
+      "serviceId": 3,
+      "serviceName": "Swimming Pool",
+      "icon": "faSwimmingPool"
+    },
+    {
+      "serviceId": 2,
+      "serviceName": "Bathtub",
+      "icon": "faBathtub"
+    }
+  ]
+}
+
+### Put room
+PUT {{local}}/api/rooms/1
+Content-Type: application/json
+
+{
+  "roomId": 1,
+  "propertyId": 1,
+  "price": {
+    "id": 1,
+    "hourPrice": 9999,
+    "dayPrice": 2,
+    "weekPrice": 3,
+    "monthPrice": 4
+  },
+  "roomStatusId": 2,
+  "imageStorageId": 164,
+  "roomName": "Test",
+  "size": "15",
+  "capacity": "6",
+  "description": "\n\t\n\nREADY TO MOVE INTO TODAY BRAND NEW ROOMS!\n\nThis house has been under a full renovation to create;\n\nCO-LIVING the new way to rent and this house...",
+  "bedrooms": 0,
+  "images": [
+    {
+      "id": 345,
+      "url": "https://pix8.agoda.net/hotelImages/666/666016/666016_15060415350028506391.jpg?ca=4&ce=1&s=1024x768",
+      "thumbnail": "test"
+    }
+  ],
+  "services": [
+    {
+      "serviceId": 1,
+      "serviceName": "service1",
+      "icon": "icon1"
+    },
+    {
+      "serviceId": 3,
+      "serviceName": "service3",
+      "icon": "icon3"
+    }
+  ]
+}
+
+### Delete room
+DELETE {{local}}/api/rooms/111

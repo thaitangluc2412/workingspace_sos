@@ -1,0 +1,83 @@
+### Get all property
+GET {{local}}/api/properties
+Accept: application/json
+
+### Get property by id
+GET {{local}}/api/properties/1
+Accept: application/json
+
+### Get property by customerId
+GET {{local}}/api/properties/getByCustomerId/6
+Accept: application/json
+
+### Post property
+POST {{local}}/api/properties
+Content-Type: application/json
+
+{
+  "customerId": 35,
+  "propertyTypeId": 3,
+  "propertyName": "Ceaira",
+  "address": "Budget Street 3692, St Lucia South, Nigeria, 666342",
+  "city": "Clarissa",
+  "roomQuantity": 12,
+  "createDate": "2000-07-01T00:00:00",
+  "description": "An tuong",
+  "rating": null,
+  "lat": 127.0,
+  "lon": 182.0,
+  "images": [
+    {
+      "url": "https://resistanth.ztm",
+      "thumbnail": "empty"
+    },
+    {
+      "url": "https://eventdbs.zn",
+      "thumbnail": "empty"
+    },
+    {
+      "url": "https://actionsf6nl1hcpw62.ma",
+      "thumbnail": "empty"
+    }
+  ]
+}
+
+### Put property
+PUT {{local}}/api/properties/1
+Content-Type: application/json
+
+{
+  "propertyId": 1,
+  "customerId": 35,
+  "propertyTypeId": 3,
+  "imageStorageId": 6,
+  "propertyName": "Test",
+  "address": "9 Duong D10, Chanh Nghia, Phuong Chanh Nghia, Phuong Chanh Nghia, Thanh pho? Thu Dau Mot, Tinh Binh Duong, Viet Nam",
+  "city": "Binh Duong",
+  "roomQuantity": 12,
+  "createDate": "2000-07-01T00:00:00",
+  "description": "An tuong",
+  "rating": null,
+  "lat": 127.0,
+  "lon": 182.0,
+  "images": [
+    {
+      "id": 6,
+      "url": "https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/219425062.jpg?k=3d378a508ebf93c4240ba436e56f51a8b3a20e3c99ce110755f9cd75d2b31b9a&o=&hp=1",
+      "thumbnail": "testt"
+    },
+    {
+      "id": 7,
+      "url": "https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/167170600.jpg?k=e021113b3db8a427dec470686a46b328b4ccca27b5f6090e406ed4a1f8ca359c&o=&hp=1",
+      "thumbnail": "empty"
+    },
+    {
+      "id": 8,
+      "url": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20016983-35fbddf719c527c00590479265aab70a.jpeg?_src=imagekit&tr=h-145,q-40,w-132",
+      "thumbnail": "empty"
+    }
+  ]
+}
+
+### Delete property
+DELETE {{local}}/api/properties/159

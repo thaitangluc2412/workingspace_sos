@@ -1,0 +1,41 @@
+### Get all propertyType
+GET {{local}}/api/property_type/property_types
+Accept: application/json
+
+### Get propertyType by id
+GET {{local}}/api/property_type/property_type/1
+Accept: application/json
+
+### Post PropertyType
+POST {{local}}/api/property_type/property_type
+Content-Type: application/json
+
+{
+  "propertyTypeName": "Test",
+  "images": [
+    {
+      "url": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10030020-6a04be0a16bff9cee0bd7e28e807f01b.jpeg?_src=imagekit&tr=h-145,q-40,w-132",
+      "thumbnail": "test"
+    }
+  ]
+}
+
+### Put PropertyTYpe
+PUT {{local}}/api/property_type/property_type/1
+Content-Type: application/json
+
+{
+  "propertyTypeId": 1,
+  "imageStorageId": 1,
+  "propertyTypeName": "Test",
+  "images": [
+    {
+      "id": 1,
+      "url": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10030020-6a04be0a16bff9cee0bd7e28e807f01b.jpeg?_src=imagekit&tr=h-145,q-40,w-132",
+      "thumbnail": "test"
+    }
+  ]
+}
+
+### Delete PorpertyType
+DELETE {{local}}/api/property_type/property_type/6
